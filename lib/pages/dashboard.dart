@@ -1,8 +1,10 @@
 import 'package:kcsm/pages/casestudy.dart';
+import 'package:kcsm/pages/home_casestudy.dart';
 import 'package:kcsm/utilities/style.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
+    
   const Dashboard({super.key});
 
   @override
@@ -106,23 +108,18 @@ class _DashboardState extends State<Dashboard> {
                 child: Stack(
                   children: <Widget>[
                     Positioned(
-                        left: 0,
+                        width: MediaQuery.of(context).size.width,
                         child: Container(
-                          //width: double.maxFinite,
-                          child: Image.asset(
-                            'assets/images/landing2.png',
-                            // width: double.maxFinite,
-                            // height: double.maxFinite,
-                          ),
-                        )),
+                            child: Image.asset('assets/images/landing2.png'))),
                     Positioned(
-                        left: 85,
+                        height: MediaQuery.of(context).size.width,
+                        //width: MediaQuery.of(context).size.width,
                         child: Container(
+                          // color: Colors.yellow,
                           //width: double.maxFinite,
                           child: Image.asset(
                             'assets/images/landing3.png',
-                            // width: double.maxFinite,
-                            // height: double.maxFinite,
+                            fit: BoxFit.fitWidth,
                           ),
                         )),
                     Positioned(
@@ -248,8 +245,7 @@ class _DashboardState extends State<Dashboard> {
   Center _buildContent() {
     return Center(
         child: Container(
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(35)),
+      decoration: BoxDecoration(color: Colors.white),
       child: Stack(children: <Widget>[
         Positioned(top: 0, child: Image.asset('assets/images/landing4.png')),
         Positioned(
@@ -258,10 +254,8 @@ class _DashboardState extends State<Dashboard> {
             child: IconButton(
                 icon: const Icon(Icons.work),
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CustomerCaseStudy()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeCasestudy()));
                 })),
         Positioned(
           top: 190,

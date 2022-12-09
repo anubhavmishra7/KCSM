@@ -39,6 +39,8 @@ dependencies:
   fluttertoast: ^8.1.1
   flutter_walkthrough_screen: ^2.0.2
   aad_oauth: ^0.4.0
+  google_nav_bar: ^5.0.6
+  shared_preferences: ^2.0.15
 
 
 dev_dependencies:
@@ -83,6 +85,20 @@ flutter:
     - assets/images/landing3.png
     - assets/images/landing4.png
     - assets/images/landing5.png
+    - assets/images/bottom1.png
+    - assets/images/bottom2.png
+    - assets/images/bottom3.png
+    - assets/images/bottom4.png
+    - assets/images/aboutkaar1.png
+    - assets/images/aboutkaar2.png
+    - assets/images/management1.png
+    - assets/images/management2.png
+    - assets/images/management3.png
+    - assets/images/management4.png
+    - assets/images/management5.png
+    - assets/images/management6.png
+    
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
