@@ -89,26 +89,47 @@ class _CustomerCaseStudyState extends State<CustomerCaseStudy> {
             // ),
             backgroundColor: Colors.redAccent,
             pinned: true,
-            expandedHeight: 90,
+            expandedHeight: 100,
             flexibleSpace: FlexibleSpaceBar(
-              background: SafeArea(
-                  child: Stack(
-                children: [
-                  Positioned(
-                      width: MediaQuery.of(context).size.width,
-                      child: Container(
-                          child: Image.asset('assets/images/landing2.png'))),
-                  Positioned(
+              background: Stack(
+                children: <Widget>[
+                  Container(
+                      //alignment: Alignment.center,
+                      width: double.infinity,
+                      //color: Colors.yellow,
                       //width: MediaQuery.of(context).size.width,
-                      child: Container(
-                    width: double.maxFinite,
-                    child: Image.asset(
-                      'assets/images/landing3.png',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ))
+                      child: Image.asset(
+                        'assets/images/landing2.png',
+                        fit: BoxFit.fitWidth,
+                      )),
+                  Container(
+                      //alignment: Alignment.center,
+                      width: double.infinity,
+                      //color: Colors.yellow,
+                      //width: MediaQuery.of(context).size.width,
+                      child: Image.asset(
+                        'assets/images/landing3.png',
+                        fit: BoxFit.fitWidth,
+                      )),
+                  // Container(
+                  //     //alignment: Alignment.center,
+                  //     width: double.maxFinite,
+                  //     child: Image.asset(
+                  //       'assets/images/landing3.png',
+                  //       fit: BoxFit.fitWidth,
+                  //     )),
+
+                  // Positioned(
+                  //     //width: MediaQuery.of(context).size.width,
+                  //     child: Container(
+                  //   width: double.maxFinite,
+                  //   child: Image.asset(
+                  //     'assets/images/landing3.png',
+                  //     fit: BoxFit.fitWidth,
+                  //   ),
+                  // ))
                 ],
-              )),
+              ),
             ),
             // flexibleSpace: FlexibleSpaceBar(
             //   // title: Text(
@@ -205,56 +226,65 @@ class _CustomerCaseStudyState extends State<CustomerCaseStudy> {
                         itemCount: 5,
                         itemBuilder: ((context, index) {
                           return GestureDetector(
-                            child: Container(
-                              height: MediaQuery.of(context).size.height * 0.15,
-                              margin: EdgeInsets.symmetric(
-                                  horizontal:
-                                      MediaQuery.of(context).size.width * 0.025,
-                                  vertical: MediaQuery.of(context).size.height *
-                                      0.012),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    caselists[index].imgUrl,
-                                    width: MediaQuery.of(context).size.width *
-                                        0.25,
-                                  ),
-                                  SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        FittedBox(
-                                          child: Text(
-                                            caselists[index].title,
-                                            style: TextStyle(fontSize: 18),
-                                            //style: Theme.of(context).textTheme,
-                                          ),
-                                        ),
-
-                                        // RichText(text: TextSpan(
-                                        //   ch
-                                        // ))
-                                      ],
+                            child: Card(
+                              elevation: 10,
+                              child: Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.15,
+                                margin: EdgeInsets.symmetric(
+                                    horizontal:
+                                        MediaQuery.of(context).size.width *
+                                            0.025,
+                                    vertical:
+                                        MediaQuery.of(context).size.height *
+                                            0.012),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      caselists[index].imgUrl,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.25,
                                     ),
-                                  ),
-                                  IconButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    route[index]
-                                                // DetailedCustomercase(
-                                                //     caselists[index])
-                                                ));
-                                      },
-                                      icon: Icon(Icons.arrow_forward_ios))
-                                ],
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.5,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          FittedBox(
+                                            child: Text(
+                                              caselists[index].title,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.bold),
+
+                                              //style: Theme.of(context).textTheme,
+                                            ),
+                                          ),
+
+                                          // RichText(text: TextSpan(
+                                          //   ch
+                                          // ))
+                                        ],
+                                      ),
+                                    ),
+                                    IconButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      route[index]
+                                                  // DetailedCustomercase(
+                                                  //     caselists[index])
+                                                  ));
+                                        },
+                                        icon: Icon(Icons.arrow_forward_ios))
+                                  ],
+                                ),
                               ),
                             ),
                           );

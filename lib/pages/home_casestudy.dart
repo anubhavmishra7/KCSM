@@ -35,11 +35,15 @@ class _HomeCasestudyState extends State<HomeCasestudy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: pages[currentIndex],
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.only(bottom: 25.0),
-          child: Container(
-            //minimum: EdgeInsets.only(bottom: 25, left: 15, right: 15),
+      body: pages[currentIndex],
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 35.0, left: 20),
+        child: Container(
+          //color: Colors.redAccent,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.redAccent, shape: StadiumBorder()),
+            onPressed: () {},
             child: GNav(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                 color: Colors.white54,
@@ -77,38 +81,44 @@ class _HomeCasestudyState extends State<HomeCasestudy> {
                   )
                 ]),
           ),
-        )
-        // Container(
-        //   padding: EdgeInsets.only(bottom: 20, left: 40, right: 40),
-        //   decoration: BoxDecoration(
-        //       borderRadius: BorderRadius.all(Radius.circular(50))),
-        //   child: BottomNavigationBar(
-        //     fixedColor: Colors.redAccent,
-        //     onTap: onTap,
-        //     currentIndex: currentIndex,
-        //     items: const [
-        //       BottomNavigationBarItem(
-        //         backgroundColor: Colors.black,
-        //         icon: Icon(Icons.home),
-        //         // ImageIcon(AssetImage("assets/images/landing2.png")
-        //         // ),
-        //         label: "Home",
-        //       ),
-        //       BottomNavigationBarItem(
-        //           icon: Icon(Icons.bookmark_outline),
-        //           label: "Bookmarks",
-        //           backgroundColor: Colors.black),
-        //       BottomNavigationBarItem(
-        //           icon: Icon(Icons.bar_chart),
-        //           label: "Statistics",
-        //           backgroundColor: Colors.black),
-        //       BottomNavigationBarItem(
-        //           icon: Icon(Icons.web),
-        //           label: "About Kaar",
-        //           backgroundColor: Colors.black),
-        //     ],
-        //   ),
-        // )
-        );
+        ),
+      ),
+
+      // bottomNavigationBar: Card(
+      //   child:
+
+      // )
+      // Container(
+      //   padding: EdgeInsets.only(bottom: 20, left: 40, right: 40),
+      //   decoration: BoxDecoration(
+      //       borderRadius: BorderRadius.all(Radius.circular(50))),
+      //   child: BottomNavigationBar(
+      //     fixedColor: Colors.redAccent,
+      //     onTap: onTap,
+      //     currentIndex: currentIndex,
+      //     items: const [
+      //       BottomNavigationBarItem(
+      //         backgroundColor: Colors.black,
+      //         icon: Icon(Icons.home),
+      //         // ImageIcon(AssetImage("assets/images/landing2.png")
+      //         // ),
+      //         label: "Home",
+      //       ),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(Icons.bookmark_outline),
+      //           label: "Bookmarks",
+      //           backgroundColor: Colors.black),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(Icons.bar_chart),
+      //           label: "Statistics",
+      //           backgroundColor: Colors.black),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(Icons.web),
+      //           label: "About Kaar",
+      //           backgroundColor: Colors.black),
+      //     ],
+      //   ),
+      // )
+    );
   }
 }

@@ -4,7 +4,6 @@ import 'package:kcsm/utilities/style.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
-    
   const Dashboard({super.key});
 
   @override
@@ -43,22 +42,11 @@ class _DashboardState extends State<Dashboard> {
                   //decoration: BoxDecoration(),
                   child: Image.asset('assets/images/landing1.png'),
                 ),
-                // IconButton(
-                //   onPressed: () {
-
-                //   },
-
-                //   //icon: Icon(Icons.menu),
-                //   color: Colors.white,
-                // ),
-                // SizedBox(
-                //   width: 30,
-                // ),
                 Text(
                   "KEBS",
                   style: kTitleStyle,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 85,
                 ),
                 Container(
@@ -97,7 +85,7 @@ class _DashboardState extends State<Dashboard> {
             ),
             backgroundColor: Colors.redAccent,
             pinned: true,
-            expandedHeight: 330,
+            expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
               // title: Text(
               //   'Portfolio',
@@ -107,43 +95,44 @@ class _DashboardState extends State<Dashboard> {
                 color: const Color.fromARGB(175, 255, 82, 82),
                 child: Stack(
                   children: <Widget>[
-                    Positioned(
-                        width: MediaQuery.of(context).size.width,
-                        child: Container(
-                            child: Image.asset('assets/images/landing2.png'))),
-                    Positioned(
-                        height: MediaQuery.of(context).size.width,
-                        //width: MediaQuery.of(context).size.width,
-                        child: Container(
-                          // color: Colors.yellow,
-                          //width: double.maxFinite,
-                          child: Image.asset(
-                            'assets/images/landing3.png',
-                            fit: BoxFit.fitWidth,
-                          ),
-                        )),
-                    Positioned(
-                        top: 100,
-                        left: 20,
-                        child: Container(
-                          child: const Text(
-                            'Welcome Back,John!',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
-                          ),
-                        )),
-                    Positioned(
-                        top: 130,
-                        left: 20,
-                        child: Container(
-                          child: const Text(
-                            '02 November 2022',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
-                          ),
-                        )),
-                    Positioned(
-                      // top: 150,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 198.0),
+                    Container(
+                        alignment: Alignment.topRight,
+                        //color: Colors.yellow,
+                        child: Image.asset('assets/images/landing2.png')),
+                    Container(
+                      alignment: Alignment.topRight,
+                      //color: Colors.blue,
+                      //width: double.maxFinite,
+                      child: Image.asset(
+                        'assets/images/landing3.png',
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 98.0, horizontal: 25),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            const Text(
+                              'Welcome Back,John!',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            const Text(
+                              '02 November 2022',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 12),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 190.0),
+                      child: Container(
                         child: Row(
                           //crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -211,7 +200,33 @@ class _DashboardState extends State<Dashboard> {
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    // Positioned(
+                    //     top: 100,
+                    //     left: 20,
+                    //     child: Container(
+                    //       child: const Text(
+                    //         'Welcome Back,John!',
+                    //         style: TextStyle(color: Colors.white, fontSize: 20),
+                    //       ),
+                    //     )),
+                    // Positioned(
+                    //     top: 130,
+                    //     left: 20,
+                    //     child: Container(
+                    //       child: const Text(
+                    //         '02 November 2022',
+                    //         style: TextStyle(color: Colors.white, fontSize: 12),
+                    //       ),
+                    //     )),
+                    // Positioned(
+                    //   // top: 150,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.only(top: 198.0),
+                    //     child:
+
+                    //   ),
+                    // )
                   ],
                 ),
               ),

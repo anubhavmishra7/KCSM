@@ -30,27 +30,48 @@ class Bookmarks extends StatelessWidget {
                 icon: Icon(Icons.arrow_back)),
             title: Text("Customer Case Study"),
             backgroundColor: Colors.redAccent,
-            expandedHeight: 90,
+            expandedHeight: 100,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              background: SafeArea(
-                  child: Stack(
-                children: [
-                  Positioned(
-                      width: MediaQuery.of(context).size.width,
-                      child: Container(
-                          child: Image.asset('assets/images/landing2.png'))),
-                  Positioned(
+              background: Stack(
+                children: <Widget>[
+                  Container(
+                      //alignment: Alignment.center,
+                      width: double.infinity,
+                      //color: Colors.yellow,
                       //width: MediaQuery.of(context).size.width,
-                      child: Container(
-                    width: double.maxFinite,
-                    child: Image.asset(
-                      'assets/images/landing3.png',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ))
+                      child: Image.asset(
+                        'assets/images/landing2.png',
+                        fit: BoxFit.fitWidth,
+                      )),
+                  Container(
+                      //alignment: Alignment.center,
+                      width: double.infinity,
+                      //color: Colors.yellow,
+                      //width: MediaQuery.of(context).size.width,
+                      child: Image.asset(
+                        'assets/images/landing3.png',
+                        fit: BoxFit.fitWidth,
+                      )),
+                  // Container(
+                  //     //alignment: Alignment.center,
+                  //     width: double.maxFinite,
+                  //     child: Image.asset(
+                  //       'assets/images/landing3.png',
+                  //       fit: BoxFit.fitWidth,
+                  //     )),
+
+                  // Positioned(
+                  //     //width: MediaQuery.of(context).size.width,
+                  //     child: Container(
+                  //   width: double.maxFinite,
+                  //   child: Image.asset(
+                  //     'assets/images/landing3.png',
+                  //     fit: BoxFit.fitWidth,
+                  //   ),
+                  // ))
                 ],
-              )),
+              ),
             ),
           ),
           SliverFillRemaining(

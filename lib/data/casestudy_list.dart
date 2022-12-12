@@ -1,9 +1,11 @@
 import 'package:kcsm/models/bookmarks.dart';
 
 final List<Caselist> caselists = [
-  Caselist(1, "Saudi International", "assets/images/aboutkaar2.png", "KSM"),
-  Caselist(2, "Second National", "assets/images/aboutkaar2.png", "KSM"),
-  Caselist(3, "Third Company", "assets/images/aboutkaar2.png", "KSM"),
-  Caselist(4, "Saudi International", "assets/images/landing1.png", "KSM"),
-  Caselist(5, "Saudi International", "assets/images/landing1.png", "KSM"),
+  Caselist(1, "Saudi International Development\nFund",
+      "assets/images/aboutkaar2.png", "KSA"),
+  Caselist(2, "SAGIS", "assets/images/aboutkaar2.png", "UK"),
+  Caselist(
+      3, "Almarai ECC Implementation", "assets/images/aboutkaar2.png", "USA"),
+  Caselist(4, "Oman Methanol Company", "assets/images/landing1.png", "KSA"),
+  Caselist(5, "KEBS Implementation", "assets/images/landing1.png", "UAE"),
 ];

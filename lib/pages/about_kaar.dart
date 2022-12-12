@@ -23,29 +23,69 @@ class AboutKaar extends StatelessWidget {
             ),
             title: Text("Customer Case Study"),
             backgroundColor: Colors.redAccent,
-            expandedHeight: 90,
+            expandedHeight: 100,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               background: SafeArea(
-                  child: Stack(
-                children: [
-                  Positioned(
-                      //height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width,
-                      child: Container(
-                          child: Image.asset('assets/images/landing2.png'))),
-                  Positioned(
-                      //height: MediaQuery.of(context).size.height,
-                      //width: MediaQuery.of(context).size.width,
-                      child: Container(
-                    width: double.maxFinite,
-                    child: Image.asset(
-                      'assets/images/landing3.png',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ))
-                ],
-              )),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                        //alignment: Alignment.center,
+                        width: double.infinity,
+                        //color: Colors.yellow,
+                        //width: MediaQuery.of(context).size.width,
+                        child: Image.asset(
+                          'assets/images/landing2.png',
+                          fit: BoxFit.fitWidth,
+                        )),
+                    Container(
+                        //alignment: Alignment.center,
+                        width: double.infinity,
+                        //color: Colors.yellow,
+                        //width: MediaQuery.of(context).size.width,
+                        child: Image.asset(
+                          'assets/images/landing3.png',
+                          fit: BoxFit.fitWidth,
+                        )),
+                    // Container(
+                    //     //alignment: Alignment.center,
+                    //     width: double.maxFinite,
+                    //     child: Image.asset(
+                    //       'assets/images/landing3.png',
+                    //       fit: BoxFit.fitWidth,
+                    //     )),
+
+                    // Positioned(
+                    //     //width: MediaQuery.of(context).size.width,
+                    //     child: Container(
+                    //   width: double.maxFinite,
+                    //   child: Image.asset(
+                    //     'assets/images/landing3.png',
+                    //     fit: BoxFit.fitWidth,
+                    //   ),
+                    // ))
+                  ],
+                ),
+                //      Stack(
+                //   children: [
+                //     Positioned(
+                //         //height: MediaQuery.of(context).size.height,
+                //         width: MediaQuery.of(context).size.width,
+                //         child: Container(
+                //             child: Image.asset('assets/images/landing2.png'))),
+                //     Positioned(
+                //         //height: MediaQuery.of(context).size.height,
+                //         //width: MediaQuery.of(context).size.width,
+                //         child: Container(
+                //       width: double.maxFinite,
+                //       child: Image.asset(
+                //         'assets/images/landing3.png',
+                //         fit: BoxFit.fitWidth,
+                //       ),
+                //     ))
+                //   ],
+                // )
+              ),
             ),
           ),
           SliverFillRemaining(
@@ -373,7 +413,7 @@ Center _buildContents1() {
           //   ),
           ,
           SizedBox(
-            height: 60,
+            height: 30,
           )
         ],
       ),
