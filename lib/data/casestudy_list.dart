@@ -5,7 +5,7 @@ final List<Caselist> caselists = [
       "assets/images/casestudy2.png", "KSA"),
   Caselist(2, "SAGIS", "assets/images/casestudy1.png", "UK"),
   Caselist(
-      3, "Almarai ECC Implementation", "assets/images/aboutkaar2.png", "USA"),
-  Caselist(4, "Oman Methanol Company", "assets/images/landing1.png", "KSA"),
-  Caselist(5, "KEBS Implementation", "assets/images/landing1.png", "UAE"),
+      3, "Almarai ECC Implementation", "assets/images/casestudy1.png", "USA"),
+  Caselist(4, "Oman Methanol Company", "assets/images/casestudy2.png", "KSA"),
+  Caselist(5, "KEBS Implementation", "assets/images/casestudy3.png", "UAE"),
 ];

@@ -83,14 +83,7 @@ class _DetailedCase3State extends State<DetailedCase3> {
         child: FloatingActionButton(
           child: Icon(Icons.format_list_bulleted),
           backgroundColor: Colors.redAccent,
-          onPressed: () {
-            PopupMenuButton<Text>(
-                itemBuilder: (context) => <PopupMenuEntry<Text>>[
-                      const PopupMenuItem<Text>(
-                        child: Text('Working a lot harder'),
-                      ),
-                    ]);
-          },
+          onPressed: () {},
         ),
       ),
     );

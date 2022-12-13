@@ -10,6 +10,7 @@ import 'package:kcsm/detailedcasestudy/detail_customercase.dart';
 import 'package:kcsm/pages/home_casestudy.dart';
 import 'package:kcsm/pages/homepage.dart';
 import 'package:kcsm/pages/loginpage.dart';
+import 'package:kcsm/pages/statistics.dart';
 import 'package:kcsm/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 

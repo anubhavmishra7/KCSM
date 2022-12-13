@@ -259,29 +259,152 @@ class _DashboardState extends State<Dashboard> {
 
   Center _buildContent() {
     return Center(
-        child: Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: Stack(children: <Widget>[
-        Positioned(top: 0, child: Image.asset('assets/images/landing4.png')),
-        Positioned(
-            top: 156,
-            left: 125,
-            child: IconButton(
-                icon: const Icon(Icons.work),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeCasestudy()));
-                })),
-        Positioned(
-          top: 190,
-          left: 10,
-          child: Image.asset("assets/images/landing5.png",
-              fit: BoxFit.contain, height: 392, width: 360),
-        )
+      child: Container(
+        decoration: BoxDecoration(color: Colors.white),
+        child: Column(
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                  width: double.maxFinite,
+                  //color: Colors.yellow,
+                  alignment: Alignment.topCenter,
+                  child: Stack(children: [
+                    Image.asset(
+                      'assets/images/landing6.png',
+                      fit: BoxFit.contain,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(Icons.wallet),
+                            Text(
+                              "  CRM",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 18),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 80,
+                        ),
+                        Center(
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Column(
+                                  children: [
+                                    // Icon(
+                                    //   Icons.dashboard,
+                                    //   size: 40,
+                                    // ),
+                                    // Text("Dashboard"),
+                                    Icon(
+                                      Icons.contact_page,
+                                      size: 40,
+                                    ),
+                                    Text("Contacts")
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Icon(
+                                      Icons.leaderboard,
+                                      size: 40,
+                                    ),
+                                    Text("Leads")
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    // Icon(
+                                    //   Icons.summarize,
+                                    //   size: 40,
+                                    // ),
+                                    // Text("Reports"),
+                                    IconButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      HomeCasestudy()));
+                                        },
+                                        icon: Icon(
+                                          Icons.folder_shared,
+                                          color: Colors.redAccent,
+                                          size: 40,
+                                        )),
 
-        //Positioned(child: Icon(Icons.work))
-      ]),
-    ));
+                                    Text("Customer\nCase Study")
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Icon(Icons.vpn_key, size: 40),
+                                    Text("Oppurtunities")
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        // Row(
+                        //   crossAxisAlignment: CrossAxisAlignment.start,
+                        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        //   children: [
+                        //     Column(
+                        //       children: [],
+                        //     ),
+                        //     Column(
+                        //       children: [],
+                        //     ),
+                        //   ],
+                        // )
+                      ],
+                    ),
+                  ])),
+
+              Container(
+                  //color: Colors.yellow,
+                  //alignment: Alignment.topCenter,
+                  child: Image.asset(
+                'assets/images/landing5.png',
+                fit: BoxFit.contain,
+                width: MediaQuery.of(context).size.width * 0.95,
+              )),
+
+              // Positioned(top: 0, child: Image.asset('assets/images/landing6.png')),
+              // Positioned(
+              //     top: 156,
+              //     left: 125,
+              //     child: IconButton(
+              //         icon: const Icon(Icons.work),
+              //         onPressed: () {
+              //           Navigator.push(context,
+              //               MaterialPageRoute(builder: (context) => HomeCasestudy()));
+              //         })),
+              // Positioned(
+              //   top: 190,
+              //   left: 10,
+              //   child: Image.asset("assets/images/landing5.png",
+              //       fit: BoxFit.contain, height: 392, width: 360),
+              // )
+
+              //Positioned(child: Icon(Icons.work))
+            ]),
+      ),
+    );
   }
 }
 

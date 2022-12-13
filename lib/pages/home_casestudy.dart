@@ -37,15 +37,18 @@ class _HomeCasestudyState extends State<HomeCasestudy> {
     return Scaffold(
       body: pages[currentIndex],
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 35.0, left: 20),
+        padding: const EdgeInsets.only(bottom: 35.0, left: 30),
         child: Container(
+          //width: MediaQuery.of(context).size.width * 1.5,
           //color: Colors.redAccent,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent, shape: StadiumBorder()),
+                padding: EdgeInsets.symmetric(horizontal: 34),
+                backgroundColor: Colors.redAccent,
+                shape: StadiumBorder()),
             onPressed: () {},
             child: GNav(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: 18, horizontal: 10),
                 color: Colors.white54,
                 duration: Duration(microseconds: 1900),
                 gap: 9,
@@ -58,7 +61,7 @@ class _HomeCasestudyState extends State<HomeCasestudy> {
                 // tabBorder: Border.all(color: Colors.redAccent),
                 tabBackgroundColor: Colors.black,
                 activeColor: Colors.white,
-                tabs: [
+                tabs: const [
                   GButton(
                     margin: EdgeInsets.only(top: 10, bottom: 10),
                     icon: Icons.home,

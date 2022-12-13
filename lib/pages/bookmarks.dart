@@ -116,20 +116,22 @@ Center _buildContent() {
           ),
         ),
         Flexible(
-          child: Container(
-            child: ListView.builder(
-                itemCount: caselists.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  DetailedCustomercase(caselists[index])));
-                    },
+          flex: 1,
+          child: ListView.builder(
+              itemCount: caselists.length,
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                DetailedCustomercase(caselists[index])));
+                  },
+                  child: Card(
+                    elevation: 20,
                     child: Container(
-                      height: MediaQuery.of(context).size.height * 0.15,
+                      height: MediaQuery.of(context).size.height * 0.10,
                       margin: EdgeInsets.symmetric(
                           horizontal: MediaQuery.of(context).size.width * 0.025,
                           vertical: MediaQuery.of(context).size.height * 0.012),
@@ -161,9 +163,9 @@ Center _buildContent() {
                         ],
                       ),
                     ),
-                  );
-                }),
-          ),
+                  ),
+                );
+              }),
         )
         // Container(
         //   height: 100,

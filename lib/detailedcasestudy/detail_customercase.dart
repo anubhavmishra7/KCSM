@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:kcsm/data/casestudy_list.dart';
 import 'package:kcsm/models/bookmarks.dart';
 import 'package:kcsm/pages/about_kaar.dart';
 import 'package:kcsm/pages/bookmarks.dart';
@@ -108,11 +109,22 @@ class _DetailedCustomercaseState extends State<DetailedCustomercase> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Image.asset("assets/images/management3.png"),
+                      leading: Image.asset("assets/images/casestudy2.png"),
+                      title: Text(
+                        caselists[0].title,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      subtitle: Text("SAP Success Factors,S4 HANA\nKSA"),
                     ),
                     RichText(
                         text: const TextSpan(
-                            style: TextStyle(color: Colors.black, fontSize: 14),
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontFamily: 'Plus Jakarta Sans'),
                             children: <TextSpan>[
                           TextSpan(
                             text: "\n\nLargest Loan Provider in KSA",
@@ -176,7 +188,7 @@ class _DetailedCustomercaseState extends State<DetailedCustomercase> {
             PopupMenuButton<Text>(
                 itemBuilder: (context) => <PopupMenuEntry<Text>>[
                       const PopupMenuItem<Text>(
-                        child: Text('Working a lot harder'),
+                        child: Text('W'),
                       ),
                     ]);
 

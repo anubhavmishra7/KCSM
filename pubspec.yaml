@@ -41,6 +41,7 @@ dependencies:
   aad_oauth: ^0.4.0
   google_nav_bar: ^5.0.6
   shared_preferences: ^2.0.15
+  pie_chart: ^5.3.2
 
 
 dev_dependencies:
@@ -85,6 +86,7 @@ flutter:
     - assets/images/landing3.png
     - assets/images/landing4.png
     - assets/images/landing5.png
+    - assets/images/landing6.png
     - assets/images/bottom1.png
     - assets/images/bottom2.png
     - assets/images/bottom3.png
@@ -99,6 +101,8 @@ flutter:
     - assets/images/management6.png
     - assets/images/casestudy1.png
     - assets/images/casestudy2.png
+    - assets/images/casestudy3.png
+    - assets/images/casestudy4.png
     
     
 
